@@ -1,9 +1,7 @@
 import app from "../src/app";
-import { create } from "../src/controllers/itemController";
 import createItems from "./factory/createItemsFactory";
 import supertest from "supertest";
 import { prisma } from "../src/database";
-import { findByTitle } from "../src/repositories/itemRepository";
 
 beforeEach(async () => {
   prisma.$executeRaw`TRUNCATE TABLE items;`;
